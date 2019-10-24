@@ -36,16 +36,18 @@ php artisan migrate
 | timestamps |  |
 
 
-mysql> show tables;
-+-----------------------+
-| Tables_in_kintorememo |
-+-----------------------+
-| failed_jobs           |
-| memos                 |
-| migrations            |
-| password_resets       |
-| users                 |
-+-----------------------+
+mysql> show tables;  
++-----------------------+  
+| Tables_in_kintorememo |  
++-----------------------+  
+| failed_jobs           |  
+| memos                 |  
+| migrations            |  
+| password_resets       |  
+| users                 |  
++-----------------------+  
+  
+
 
 
 
