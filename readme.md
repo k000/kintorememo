@@ -1,3 +1,5 @@
+# 勉強メモ
+
 
 ## 機能
 
@@ -47,6 +49,20 @@ mysql> show tables;
 | users                 |  
 +-----------------------+  
   
+
+## サービスプロバイダの作成
+
+php artisan make:provider RepositoryServiceProvider
+
+config/app.phpに追加しておく。
+
+
+## コントローラーの作成
+
+php artisan make:controller MemoController
+
+
+
 
 
 
