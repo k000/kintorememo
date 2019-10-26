@@ -41,7 +41,7 @@ class MemoTest extends TestCase
             'day' => 20191026,
             'place' => 'ゴールドジム',
             'isprivate' => true,
-            'memo' => 'うんこー！'
+            'memo' => '凄い疲れた'
         ];
 
 
@@ -70,7 +70,7 @@ class MemoTest extends TestCase
             'day' => 20191026,
             'place' => 'ゴールドジム',
             'isprivate' => true,
-            'memo' => 'うんこー！'
+            'memo' => '前のコミットのmemoが大変なことになっている。'
         ];
 
 
