@@ -41,12 +41,40 @@ class MemoTest extends TestCase
             'day' => 20191026,
             'place' => 'ゴールドジム',
             'isprivate' => true,
-            'memo' => '前回の背中トレーニングよりも集中力が切れずに行えた。'
+            'memo' => 'うんこー！'
         ];
 
 
         $response = $this->call('post','memo/create',$data);
         $this->assertDatabaseHas('memos',$data);
 
+    }
+
+
+    /**
+     * @test
+     */
+    public function test_postでバリデーションエラーで失敗すること()
+    {
+        $hoge = array(
+            'shumoku' => 'ラットプルダウン',
+            'rep' => 12,
+            'set' => 3
+        );
+
+        $me = serialize($hoge);
+        
+        $data = [
+            'event' => '胸と背中のトレーニングとにかく疲れたが文字稼ぎ文字稼ぎ',
+            'data' => $me,
+            'day' => 20191026,
+            'place' => 'ゴールドジム',
+            'isprivate' => true,
+            'memo' => 'うんこー！'
+        ];
+
+
+        $response = $this->call('post','memo/create',$data);
+        $this->assertDatabaseMissing('memos', $data);//テーブルに期待値がないこと
     }
 }

@@ -100,7 +100,18 @@ tests/UnitフォルダにMemoTest.phpができる。
 php vendor/bin/phpunit tests/Unit/MemoTest.php
 
 
+## フォームリクエストの作成
 
+php artisan make:request MemoValiRequest
+
+→お馴染みのRequestクラスを継承しているので、コントローラーの引数だけ変更すれば良い。
+
+
+# gitコマンドメモ
+
+## 最後のcommitに戻す
+
+git checkout -- ./
 
 
 

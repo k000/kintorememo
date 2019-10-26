@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Repositories\Memo\Interfaces\MemoRepositoryInterface;
 use App\Memo;
+use App\Http\Requests\MemoValiRequest;
 
 
 class MemoController extends Controller
@@ -31,8 +32,9 @@ class MemoController extends Controller
         $this->memoRepo->index();
     }
 
-    public function create(Request $request)
+    public function create(MemoValiRequest $request)
     {
+        \Log::debug($request);
         $this->memoRepo->createMemo($request);
     }
 
