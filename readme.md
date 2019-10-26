@@ -88,6 +88,18 @@ php artisan make:model Memo
 Memoモデルをnewしたものを返却させる
 
 
+## テストの作成
+
+hp artisan make:test MemoTest --unit
+
+tests/UnitフォルダにMemoTest.phpができる。
+
+
+## テストの実行
+
+php vendor/bin/phpunit tests/Unit/MemoTest.php
+
+
 
 
 

@@ -31,6 +31,11 @@ class MemoController extends Controller
         $this->memoRepo->index();
     }
 
+    public function create(Request $request)
+    {
+        $this->memoRepo->createMemo($request);
+    }
+
 
 
 

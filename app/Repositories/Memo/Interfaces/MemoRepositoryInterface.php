@@ -1,10 +1,12 @@
 <?php
 
 namespace App\Repositories\Memo\Interfaces;
+use Illuminate\Http\Request;
+
 
 interface MemoRepositoryInterface{
     
-    public function createMemo();
+    public function createMemo(Request $requests);
 
     public function index();
 
