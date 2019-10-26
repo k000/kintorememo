@@ -4,9 +4,18 @@
 namespace App\Repositories\Memo;
 
 use App\Repositories\Memo\Interfaces\MemoRepositoryInterface;
+use App\Repositories\BaseRepository;
+use App\Memo; //モデル
 
 
-class MemoRepository implements MemoRepositoryInterface{
+class MemoRepository extends BaseRepository implements MemoRepositoryInterface{
+
+    protected $model;
+
+    public function __cunstruct(Memo $model)
+    {
+        $this->model = $model;
+    }
 
     public function createMemo()
     {
@@ -15,7 +24,7 @@ class MemoRepository implements MemoRepositoryInterface{
 
     public function index()
     {
-        dd("MemoRepositroyのindexメソッド");
+        dd($this->model->all());
     }
 
     public function showMemo()

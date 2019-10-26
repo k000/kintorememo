@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Repositories\Memo\Interfaces\MemoRepositoryInterface;
+use App\Memo;
 
 
 class MemoController extends Controller

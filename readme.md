@@ -49,6 +49,21 @@ mysql> show tables;
 | users                 |  
 +-----------------------+  
   
+mysql> show columns from memos;  
++------------+---------------------+------+-----+---------+----------------+  
+| Field      | Type                | Null | Key | Default | Extra          |  
++------------+---------------------+------+-----+---------+----------------+  
+| id         | bigint(20) unsigned | NO   | PRI | NULL    | auto_increment |  
+| event      | varchar(191)        | NO   |     | NULL    |                |  
+| data       | blob                | NO   |     | NULL    |                |  
+| day        | date                | NO   |     | NULL    |                |  
+| place      | varchar(191)        | NO   |     | NULL    |                |  
+| isprivate  | tinyint(1)          | NO   |     | NULL    |                |  
+| memo       | text                | NO   |     | NULL    |                |  
+| created_at | timestamp           | YES  |     | NULL    |                |  
+| updated_at | timestamp           | YES  |     | NULL    |                |  
++------------+---------------------+------+-----+---------+----------------+  
+
 
 ## サービスプロバイダの作成
 
@@ -60,6 +75,17 @@ config/app.phpに追加しておく。
 ## コントローラーの作成
 
 php artisan make:controller MemoController
+
+
+
+## モデルの作成
+
+php artisan make:model Memo
+
+
+## サービスプロバイダを編集する
+
+Memoモデルをnewしたものを返却させる
 
 
 
