@@ -27,14 +27,20 @@ class MemoController extends Controller
     }
 
 
-    public function test()
+    public function index()
     {
-        $this->memoRepo->index();
+        $data = $this->memoRepo->index();
+        return view('Memo.index')->with('datas',$data);
     }
+
+    public function show(){
+        $data = $this->memoRepo->showMemo();
+        return view('Memo.memo')->with('datas',$data);
+    }
+
 
     public function create(MemoValiRequest $request)
     {
-        \Log::debug($request);
         $this->memoRepo->createMemo($request);
     }
 

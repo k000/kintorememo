@@ -40,7 +40,7 @@ class MemoTest extends TestCase
             'data' => $me,
             'day' => 20191026,
             'place' => 'ゴールドジム',
-            'isprivate' => true,
+            'isprivate' => false,
             'memo' => '凄い疲れた'
         ];
 

@@ -16,7 +16,9 @@ Route::get('/', function () {
 });
 
 
-Route::get('/test', 'MemoController@test');
+Route::get('/memo', 'MemoController@index');
 
 Route::post('/memo/create','MemoController@create');
-//Route::post('/memo/create',function(){});
+Route::get('/memo/create',function() {return view('Memo.createMemo');});
+
+Route::get('/memo/{id}','MemoController@show');

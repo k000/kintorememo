@@ -18,7 +18,6 @@ abstract class BaseRepository{
 
     public function __construct(Model $model)
     {
-        var_dump("called!");
         $this->model = $model;      
     }
 

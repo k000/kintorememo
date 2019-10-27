@@ -114,5 +114,39 @@ php artisan make:request MemoValiRequest
 git checkout -- ./
 
 
+# bladeファイルメモ
 
+
+
+# JavaScriptメモ
+
+## データ属性
+
+### データ属性の取得
+<div class="data-area" data-count="0">
+→ lastChild.dataset.count // 0
+
+
+### データ属性の設定
+
+lastChild.dataset.count = "1"
+
+
+## 最後の子要素
+
+lastElementChild
+
+## 要素をコピーする
+
+const cloneNode = lastChild.cloneNode(true)
+
+## 要素を追加
+
+dataArea.appendChild(cloneNode);
+
+
+## 変換
+
+文字列→数値
+lastChild.dataset.count("1")
 
