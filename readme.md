@@ -114,6 +114,22 @@ json_encode — 値を JSON 形式にして返す
 json_decode — JSON 文字列をデコードする
 
 
+
+
+## Socialiteのインストール
+
+composer require laravel/socialite 
+
+
+## laravelの認証
+
+php artisan make:auth
+
+
+
+
+
+
 # gitコマンドメモ
 
 ## 最後のcommitに戻す
@@ -163,6 +179,12 @@ lastChild.dataset.count("1")
 ## RitoLabo様
 
 https://www.ritolab.com/
+
+## LaravelでTwitter認証(ログイン)機能をサクッと作る
+
+https://pllogg.com/laravel/1320/
+
+
 
 
 

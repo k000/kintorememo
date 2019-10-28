@@ -3,6 +3,48 @@ body {
   color: white;
 }
 
+#front-content {
+  width: 100%;
+  background-image: url("/img/gym.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+.login-btn {
+  background: #0062DA;
+  border-radius: 1px;
+  cursor: pointer;
+  width: 250px;
+  padding: 10px;
+  color: #fff;
+  border: none;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  margin: 20px 0;
+}
+
+.login-btn a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#home-content {
+  width: 100%;
+  background-image: url("/img/mountain.jpg");
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
 #content {
   width: 100%;
   background-image: url("/img/mountain.jpg");

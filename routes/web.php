@@ -22,3 +22,12 @@ Route::post('/memo/create','MemoController@create');
 Route::get('/memo/create',function() {return view('Memo.createMemo');});
 
 Route::get('/memo/{id}','MemoController@show');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+Route::get('/login/twitter', 'Auth\TwitterController@redirectToProvider')->name("twitter.login");
+Route::get('/login/twitter/callback', 'Auth\TwitterController@handleProviderCallback'); 

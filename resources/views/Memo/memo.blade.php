@@ -3,6 +3,7 @@
 @section('content')
 
 
+
     <h1>個別記事</h1>
 
     @for($i=0; $i < count($datas->data->shumoku); $i++)
