@@ -5,8 +5,8 @@
 <div id="home-content">
     <div>
 
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="{{ route('logout') }}"
+        <div>
+            <a href="{{ route('logout') }}"
                 onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">
                 {{ __('Logout') }}
@@ -23,7 +23,20 @@
         @foreach($datas as $data)
             <a href="/memo/{{$data->id}}">{{$data->event}}</a>
         @endforeach
-        
+
+        <div class="index-list">
+            <ul>
+                <li>aaaaaa</li>
+                <li>aaaaaa</li>
+                <li>aaaaaa</li>
+                <li>aaaaaa</li>
+                <li>aaaaaa</li>
+                <li>aaaaaa</li>
+                <li>aaaaaa</li>
+                <li>aaaaaa</li>
+            </ul>
+        </div>
+
 
     </div>
 </div>

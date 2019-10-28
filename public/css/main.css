@@ -1,6 +1,6 @@
 body {
-  background: #000000;
-  color: white;
+  background: #fff;
+  color: #333;
 }
 
 #front-content {
@@ -18,6 +18,7 @@ body {
           justify-content: center;
   -webkit-box-align: center;
           align-items: center;
+  color: white;
 }
 
 .login-btn {
@@ -40,9 +41,6 @@ body {
 
 #home-content {
   width: 100%;
-  background-image: url("/img/mountain.jpg");
-  background-repeat: no-repeat;
-  min-height: 100vh;
 }
 
 #content {
@@ -158,4 +156,17 @@ body {
 }
 #form-outer .form-area {
   margin: 10px 0;
+}
+
+.index-list ul {
+  list-style: none;
+}
+.index-list ul li {
+  border-bottom: 1px solid slategray;
+  height: 30px;
+  background: #F5F5F5;
+  margin: 10px 0;
+  max-width: 680px;
+  width: 100%;
+  padding: 10px 10px;
 }

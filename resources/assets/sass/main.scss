@@ -1,4 +1,4 @@
-$background:#000000;
+$background:#fff;
 $pc: 1024px; // PC
 $tab: 680px; // タブレット
 $sp: 480px;  // スマホ
@@ -23,7 +23,7 @@ $sp: 480px;  // スマホ
 
 body{
     background:$background;
-    color:white;
+    color:#333;
 }
 
 
@@ -37,6 +37,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color:white;
 }
 
 .login-btn{
@@ -58,9 +59,6 @@ body{
 
 #home-content{
     width:100%;
-    background-image: url('/img/mountain.jpg');
-    background-repeat: no-repeat;
-    min-height: 100vh;
 }
 
 #content{
@@ -187,7 +185,21 @@ body{
 
 }
 
-
+.index-list{
+    ul{
+        list-style: none;
+        li{
+            border-bottom: 1px solid slategray;
+            height: 30px;
+            background:#F5F5F5;
+            margin:10px 0;
+            max-width:680px;
+            width:100%;
+            padding:10px 10px;
+            
+        }
+    }
+}
 
 
 
