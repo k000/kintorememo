@@ -1,0 +1,119 @@
+body {
+  background: #000000;
+  color: white;
+}
+
+#content {
+  width: 100%;
+  background-image: url("/img/mountain.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+#form-outer {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px 10px;
+}
+#form-outer .day-area {
+  width: 200px;
+}
+#form-outer input, #form-outer textarea {
+  outline: none;
+  border: none;
+  background: none;
+  border-bottom: solid 1px gray;
+  color: white;
+  padding: 15px 3px;
+  width: 90%;
+}
+#form-outer input::-webkit-input-placeholder, #form-outer textarea::-webkit-input-placeholder {
+  color: #6E6E6E;
+}
+#form-outer input::-moz-placeholder, #form-outer textarea::-moz-placeholder {
+  color: #6E6E6E;
+}
+#form-outer input:-ms-input-placeholder, #form-outer textarea:-ms-input-placeholder {
+  color: #6E6E6E;
+}
+#form-outer input::-ms-input-placeholder, #form-outer textarea::-ms-input-placeholder {
+  color: #6E6E6E;
+}
+#form-outer input::placeholder, #form-outer textarea::placeholder {
+  color: #6E6E6E;
+}
+#form-outer button#addBtn {
+  padding: 10px;
+  color: #000;
+  border: none;
+  background: lightgreen;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#form-outer button#fire {
+  background: #0062DA;
+  border-radius: 1px;
+  cursor: pointer;
+  width: 250px;
+  padding: 10px;
+  color: #fff;
+  border: none;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  margin: 20px 0;
+}
+#form-outer button#fire:hover {
+  background: #78a9e4;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+#form-outer button#delBtn {
+  padding: 10px;
+  color: white;
+  border: none;
+  background: lightcoral;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#form-outer button#delBtn:hover {
+  background: red;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+#form-outer #data-area-outer {
+  margin: 10px 0;
+}
+#form-outer #data-area-outer .data-area {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0;
+  max-width: 600px;
+  width: 100%;
+}
+#form-outer #data-area-outer .data-area .meta-shumoku {
+  width: 60%;
+}
+#form-outer #data-area-outer .data-area .meta-child {
+  width: 38%;
+}
+#form-outer #data-area-outer .data-area .meta-child > div {
+  display: -webkit-box;
+  display: flex;
+  font-size: 11px;
+}
+#form-outer #data-area-outer .data-area label {
+  width: 100px;
+}
+@media (max-width: 680px) {
+  #form-outer #data-area-outer .data-area {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+  }
+}
+#form-outer .form-area {
+  margin: 10px 0;
+}

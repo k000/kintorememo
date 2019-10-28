@@ -107,6 +107,13 @@ php artisan make:request MemoValiRequest
 →お馴染みのRequestクラスを継承しているので、コントローラーの引数だけ変更すれば良い。
 
 
+## 可変フォーム値のやりとり
+
+json_encode — 値を JSON 形式にして返す
+
+json_decode — JSON 文字列をデコードする
+
+
 # gitコマンドメモ
 
 ## 最後のcommitに戻す
@@ -149,4 +156,13 @@ dataArea.appendChild(cloneNode);
 
 文字列→数値
 lastChild.dataset.count("1")
+
+
+# 参考にさせてもらった凄いサイト
+
+## RitoLabo様
+
+https://www.ritolab.com/
+
+
 

@@ -41,10 +41,11 @@ class MemoRepository extends BaseRepository implements MemoRepositoryInterface{
         $this->model->save();
     }
 
-    
+
     public function index()
     {
-        return $this->model->all();
+        $data = $this->model->select('id','event','day')->where('id','=','14')->get();
+        return $data;
     }
 
 

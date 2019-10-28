@@ -7,12 +7,7 @@
 
 
 @foreach($datas as $data)
-    {{$data->event}}
-
-    @for($i=0; $i < count($data->data); $i++)
-        {{$data[$i]}}
-    @endfor
-
+    <a href="/memo/{{$data->id}}">{{$data->event}}</a>
 @endforeach
 
 @endsection

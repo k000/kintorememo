@@ -1,0 +1,156 @@
+$background:#000000;
+$pc: 1024px; // PC
+$tab: 680px; // タブレット
+$sp: 480px;  // スマホ
+
+@mixin pc {
+    @media (max-width: ($pc)) {
+      @content;
+    }
+  }
+  @mixin tab {
+    @media (max-width: ($tab)) {
+      @content;
+    }
+  }
+  @mixin sp {
+    @media (max-width: ($sp)) {
+      @content;
+    }
+  }
+
+
+
+body{
+    background:$background;
+    color:white;
+}
+
+
+#content{
+    width:100%;
+    background-image: url('/img/mountain.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+#form-outer{
+
+    width:100%;
+    background:rgba(0,0,0,.8);
+    color:white;
+    padding:10px 10px;
+
+    .day-area{
+        width:200px;
+    }
+
+    input,textarea{
+        outline: none;
+        border: none;
+        background:none;
+        border-bottom: solid 1px gray;
+        color: white;
+        padding: 15px 3px;
+        width:90%;
+    }
+    
+    input::placeholder,textarea::placeholder {
+        color:#6E6E6E;
+    }
+
+    button#addBtn{
+        padding: 10px;
+        color: #000;
+        border: none;
+        background: lightgreen;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    button#fire{
+        background:#0062DA;
+        border-radius: 1px;
+        cursor: pointer;
+        width:250px;
+        padding: 10px;
+        color: #fff;
+        border: none;
+        transition: all .5s;
+        margin:20px 0;
+    }
+    button#fire:hover{
+        background:rgb(120, 169, 228);
+        transition: all .5s;
+    }
+
+
+    button#delBtn{
+        padding: 10px;
+        color: white;
+        border: none;
+        background: lightcoral;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    button#delBtn:hover{
+        background: red;
+        transition: all .3s;
+    }
+
+
+    #data-area-outer{
+
+        margin:10px 0;
+
+        .data-area{
+            display: flex;
+            flex-wrap: wrap;
+            margin:20px 0;
+            max-width:600px;
+            width:100%;
+
+            .meta-shumoku{
+                width:60%;
+            }
+            .meta-child{
+                width:38%;
+
+                > div{
+                    display: flex;
+                    font-size:11px;  
+                }
+                input{
+                    
+                }
+            }
+
+            label{
+                width:100px;
+            }
+
+            @include tab {
+                flex-direction: column;
+                .meta-child{
+                    input{
+                       
+                    }
+                }
+            };
+
+        }
+
+   
+    }
+
+    .form-area{
+        margin:10px 0;
+       
+    }
+
+}
+
+
+
+
