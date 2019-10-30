@@ -114,6 +114,15 @@ json_encode — 値を JSON 形式にして返す
 json_decode — JSON 文字列をデコードする
 
 
+## テーブルにカラムを追加する
+
+php artisan make:migration add_user_id_to_memos_table --table=memos
+
+## リレーションを作成する
+
+users × memos
+
+
 
 
 ## Socialiteのインストール

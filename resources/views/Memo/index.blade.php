@@ -20,20 +20,15 @@
 
         <h1>Index</h1>
 
-        @foreach($datas as $data)
-            <a href="/memo/{{$data->id}}">{{$data->event}}</a>
-        @endforeach
+
+
 
         <div class="index-list">
             <ul>
-                <li>aaaaaa</li>
-                <li>aaaaaa</li>
-                <li>aaaaaa</li>
-                <li>aaaaaa</li>
-                <li>aaaaaa</li>
-                <li>aaaaaa</li>
-                <li>aaaaaa</li>
-                <li>aaaaaa</li>
+                @foreach($datas as $data)
+                    <li><a href="{{action('MemoController@show',$data->id)}}">{{$data->event}}</a></li>
+                    
+                @endforeach
             </ul>
         </div>
 

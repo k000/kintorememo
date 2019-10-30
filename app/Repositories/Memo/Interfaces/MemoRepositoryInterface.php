@@ -10,7 +10,7 @@ interface MemoRepositoryInterface{
 
     public function index();
 
-    public function showMemo();
+    public function showMemo($id);
 
     public function deleteMemo();
 

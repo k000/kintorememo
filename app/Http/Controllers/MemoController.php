@@ -33,8 +33,8 @@ class MemoController extends Controller
         return view('Memo.index')->with('datas',$data);
     }
 
-    public function show(){
-        $data = $this->memoRepo->showMemo();
+    public function show($id){
+        $data = $this->memoRepo->showMemo($id);
         return view('Memo.memo')->with('datas',$data);
     }
 

@@ -7,6 +7,8 @@ use App\Repositories\Memo\Interfaces\MemoRepositoryInterface;
 use App\Repositories\BaseRepository;
 use App\Memo; //モデル
 use Illuminate\Http\Request;
+use Auth;
+
 
 class MemoRepository extends BaseRepository implements MemoRepositoryInterface{
 
@@ -23,7 +25,7 @@ class MemoRepository extends BaseRepository implements MemoRepositoryInterface{
 
         $this->model->event = $requests->event;
         $this->model->day = $requests->day;
-
+        $this->model->user_id = Auth::id();
         $shumoku = json_encode($requests->shumoku);
         $weight = json_encode($requests->weight);
         $rep = json_encode($requests->rep);
@@ -44,14 +46,15 @@ class MemoRepository extends BaseRepository implements MemoRepositoryInterface{
 
     public function index()
     {
-        $data = $this->model->select('id','event','day')->where('id','=','14')->get();
+        $data = $this->model->select('id','event','day','user_id')->where('user_id','=',Auth::id())->get();
         return $data;
     }
 
 
-    public function showMemo()
+    public function showMemo($id)
     {
-        $data = $this->model->where('id','=','14')->first();
+        //ここで条件を指定
+        $data = $this->model->where('id','=',$id)->first();
 
         $data->data = json_decode($data->data);
 
