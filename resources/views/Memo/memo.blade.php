@@ -5,23 +5,6 @@
 
 <style>
     
-    #memo-content-outer{
-        width:90%;
-        max-width:1200px;
-        border:1px solid #000;
-        margin:0 auto;
-    }
-
-    #memo-content-outer .head-area{
-        padding:10px;
-        display:flex;
-        justify-content: space-between;
-    }
-    #memo-content-outer .head-area h1,p{
-        padding:0;
-        margin:0;
-    }
-    
 
 
 </style>
@@ -29,23 +12,26 @@
 <div id="memo-content-outer">
     
     <div class="head-area">
-        <h1>{{$datas->event}}あき高田健志ってすごいよなぁ！？</h1>
+        <h1>{{$datas->event}}</h1>
         <p>{{$datas->place}}</p>
+        
+    </div>
+    <div id="head-area-day">
         <small>{{$datas->day}}</small>
     </div>
 
-   
 
-    <table>
+
+    <table class="memo-table">
         <thead>
-            <tr class="table100-head">
+            <tr class="memo-table-head">
                 <th class="column1">種目</th>
                 <th class="column2">重量</th>
                 <th class="column3">レップ数</th>
                 <th class="column4">セット数</th>
             </tr>
         </thead>
-        <tbody>    
+        <tbody class="memo-table-data">    
             @for($i=0; $i < count($datas->data->shumoku); $i++)
                 <tr>
                     <td class="column{{$i}}">{{$datas->data->shumoku[$i]}}</td>    

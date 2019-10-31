@@ -46,7 +46,7 @@ class MemoRepository extends BaseRepository implements MemoRepositoryInterface{
 
     public function index()
     {
-        $data = $this->model->select('id','event','day','user_id')->where('user_id','=',Auth::id())->get();
+        $data = $this->model->select('id','event','day','place','user_id')->where('user_id','=',Auth::id())->get();
         return $data;
     }
 

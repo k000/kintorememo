@@ -6,13 +6,13 @@ addBtn.addEventListener('click',(e)=>{
     const lastChild = dataArea.lastElementChild;
     const cloneNode = lastChild.cloneNode(true);
     cloneNode.dataset.count = parseInt(lastChild.dataset.count) + 1;
-
-    let nodes = cloneNode.childNodes;
-
-    nodes[1].childNodes[1].name = "shumoku[" + cloneNode.dataset.count + "]";
-    nodes[3].childNodes[1].childNodes[3].name = "weight[" + cloneNode.dataset.count + "]";
-    nodes[3].childNodes[3].childNodes[3].name = "rep[" + cloneNode.dataset.count + "]";
-    nodes[3].childNodes[5].childNodes[3].name = "set[" + cloneNode.dataset.count + "]";
+    
+    let childs = cloneNode.children;
+   
+    childs[0].children[0].name = "shumoku[" + cloneNode.dataset.count + "]";
+    childs[1].children[0].children[1].name = "weight[" + cloneNode.dataset.count + "]";
+    childs[1].children[1].children[1].name = "rep[" + cloneNode.dataset.count + "]";
+    childs[1].children[2].children[1].name = "set[" + cloneNode.dataset.count + "]";
 
     dataArea.appendChild(cloneNode);
 });

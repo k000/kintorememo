@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   background: #fff;
   color: #666;
@@ -169,4 +170,80 @@ body {
   max-width: 680px;
   width: 100%;
   padding: 10px 10px;
+}
+
+#memo-content-outer {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+#memo-content-outer .head-area {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+}
+
+#memo-content-outer .head-area h1, p {
+  padding: 0;
+  margin: 0;
+}
+
+#head-area-day {
+  text-align: left;
+}
+
+.memo-table {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 30px 0;
+}
+@media (max-width: 680px) {
+  .memo-table {
+    font-size: 14px;
+  }
+}
+
+.memo-table thead {
+  position: relative;
+  text-align: left;
+}
+
+.memo-table-head {
+  height: 50px;
+  background: royalblue;
+  position: relative;
+  color: white;
+}
+
+/*最初の要素だけ*/
+.memo-table-head th:nth-child(1) {
+  padding: 0 10px;
+}
+
+#memo-content-outer td {
+  padding: 10px 0;
+}
+
+#memo-content-outer td:nth-child(1) {
+  padding: 10px 10px;
+}
+
+.memo-table-data tr:nth-child(odd) {
+  background: whitesmoke;
+}
+
+.fa-search {
+  color: blue;
+}
+
+.fa-trash {
+  color: red;
+  cursor: pointer;
 }
