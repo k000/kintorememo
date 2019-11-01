@@ -123,6 +123,17 @@ php artisan make:migration add_user_id_to_memos_table --table=memos
 users × memos
 
 
+## Implicit Binding
+
+- route
+
+Route::get('/memo/{id}','MemoController@show');
+
+<a href="{{action('MemoController@show',$data->id)}}"><i class="fas fa-search shosai"></i></a>
+
+
+
+
 
 
 ## Socialiteのインストール

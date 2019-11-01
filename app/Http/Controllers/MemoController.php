@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Repositories\Memo\Interfaces\MemoRepositoryInterface;
 use App\Memo;
 use App\Http\Requests\MemoValiRequest;
-
+use Auth;
 
 class MemoController extends Controller
 {
@@ -34,8 +34,13 @@ class MemoController extends Controller
     }
 
     public function show($id){
+
         $data = $this->memoRepo->showMemo($id);
-        return view('Memo.memo')->with('datas',$data);
+
+        if( $this->canOpenPage($data,$id) )
+            return view('Memo.memo')->with('datas',$data);
+        else
+            return view('error');
     }
 
 
@@ -45,6 +50,27 @@ class MemoController extends Controller
     }
 
 
+    public function delete($id){
+        
+        $this->memoRepo->deleteMemo($id);
+        return redirect('/memo');
+    }
+
+
+
+    private function canOpenPage($data,$id){
+
+        $canOpen = true;
+
+        if($data){
+            if( $data->user_id == Auth::id() )
+                return $canOpen;
+            else
+                return !$canOpen;
+        }else{
+            return !$canOpen;
+        }
+    }
 
 
 }

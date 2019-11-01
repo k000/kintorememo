@@ -53,23 +53,30 @@ class MemoRepository extends BaseRepository implements MemoRepositoryInterface{
 
     public function showMemo($id)
     {
-        //ここで条件を指定
+     
         $data = $this->model->where('id','=',$id)->first();
 
-        $data->data = json_decode($data->data);
+        if ( $data ){
+            $data->data = json_decode($data->data);
+            $data->data->shumoku = json_decode($data->data->shumoku);
+            $data->data->weight = json_decode($data->data->weight);
+            $data->data->rep = json_decode($data->data->rep);
+            $data->data->set = json_decode($data->data->set);
 
-        $data->data->shumoku = json_decode($data->data->shumoku);
-        $data->data->weight = json_decode($data->data->weight);
-        $data->data->rep = json_decode($data->data->rep);
-        $data->data->set = json_decode($data->data->set);
-
-        return $data;
+            return $data;
+        } else {
+            return null;
+        }
     }
     
 
-    public function deleteMemo()
+    public function deleteMemo($id)
     {
-
+        $data = $this->model->findOrFail($id);
+        if($data->user_id === Auth::id()){
+            $data->delete();
+        }
+        
     }
 
 }

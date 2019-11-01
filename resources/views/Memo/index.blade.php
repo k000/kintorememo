@@ -44,7 +44,15 @@
                             <td class="column">{{$data->day}}</td>    
                             <td class="column">{{$data->event}}</td>    
                             <td class="column">{{$data->place}}</td>    
-                            <td class="column"><i class="fas fa-trash gomi"></i></td>
+                            <td class="column">
+                                <a href="#" data-id="{{$data->id}}" class="gomi"><i class="fas fa-trash"></i></a>
+
+                                <form method="post" action="{{url('/memo',$data->id)}}" id="form_{{$data->id}}">
+                                {{ csrf_field() }}
+                                {{ method_field('delete') }}
+                                </form>
+                                
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>
@@ -54,6 +62,21 @@
     </div>
 
 </div>
+
+<script>
+        const dels = document.getElementsByClassName('gomi')
+        let i;
+
+        for(i=0;i<dels.length;i++){
+            dels[i].addEventListener('click', function(e) {
+                e.preventDefault();
+                if(confirm('投稿を削除をします')){
+                    document.getElementById('form_' + this.dataset.id).submit();
+                }
+            })
+        }
+</script>
+
 
 @endsection
 

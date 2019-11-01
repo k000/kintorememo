@@ -2,6 +2,7 @@
 
 namespace App\Repositories\Memo\Interfaces;
 use Illuminate\Http\Request;
+use App\Memo; 
 
 
 interface MemoRepositoryInterface{
@@ -12,6 +13,6 @@ interface MemoRepositoryInterface{
 
     public function showMemo($id);
 
-    public function deleteMemo();
+    public function deleteMemo($id);
 
 }

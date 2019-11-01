@@ -31,3 +31,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/login/twitter', 'Auth\TwitterController@redirectToProvider')->name("twitter.login");
 Route::get('/login/twitter/callback', 'Auth\TwitterController@handleProviderCallback'); 
+
+Route::delete('memo/{id}','MemoController@delete');
