@@ -152,11 +152,13 @@ users × memos
 ## Implicit Binding
 
 - route
-
+```
 Route::get('/memo/{id}','MemoController@show');
+```
 
+```
 <a href="{{action('MemoController@show',$data->id)}}"><i class="fas fa-search shosai"></i></a>
-
+```
 
 
 ## Socialiteのインストール
@@ -171,12 +173,11 @@ php artisan make:auth
 
 ## Auth ミドルウェア
 
-
+```
 Route::group(['middleware' => 'auth'],function(){
     Route::get('/memo', 'MemoController@index');
 });
-
-
+```
 
 # gitコマンドメモ
 
@@ -188,8 +189,31 @@ git checkout -- ./
 # bladeファイルメモ
 
 
+## ログインユーザーかどうか確認する
+```
+@auth
+    hogehoge
+@endauth
+
+@guest
+    hogehoge
+@endguest
+```
+
 
 # JavaScriptメモ
+
+ラムダのthisは注意
+
+```
+const dels = document.getElementsByClassName('gomi')
+
+for(i=0;i<dels.length;i++){
+    dels[i].addEventListener('click', function(e) {
+```
+ここをラムダで定義すると宣言時のthisとなるので
+うまく要素を指定できないyo
+
 
 ## データ属性
 

@@ -12,9 +12,11 @@
                 Twitterアカウントさえあれば、誰でも無料で開始することができます。
             </p>
             <br />
+            @guest
             <span class="login-btn">
                 <a href="{{ route("twitter.login") }}">Twitterアカウントでログインして利用開始する</a>
             </span>
+            @endguest
         </section>
     </div>
 
