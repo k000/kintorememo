@@ -8,7 +8,7 @@
 <div id="content">
 <div id="form-outer">
     <h1>新規投稿</h1>
-    <p>you input this area also ths freature nasu choizes is shun.</p>
+
     <form method ="post" action="/memo/create">
         {{ csrf_field() }}
         <div class="form-content">

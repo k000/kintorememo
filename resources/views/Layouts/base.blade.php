@@ -13,10 +13,13 @@
         <div id="wrapper">
             <head>
                 <nav>
+
                     <ul>
+                        @auth
                         <div>
                             <li><a href="{{action('MemoController@index')}}">ホーム</a></li>
                             <li><a href="{{action('MemoController@create')}}">新規投稿</a></li>
+                            <li><a href="/help">ヘルプ</a></li>
                         </div>
                         <div>
                             <li>
@@ -31,8 +34,13 @@
                                 </form>
                             </li>
                         </div>
-                    </ul>
+                        @endauth
 
+                        @guest
+                            <div>ログイン</div>
+                        @endguest
+
+                    </ul>
                 </nav>
             </head> 
 

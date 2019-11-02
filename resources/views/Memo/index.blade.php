@@ -10,7 +10,7 @@
 
 <div id="home-content">
     <div id="memo-content-outer">
-        <h1>Index</h1>
+        <h1>投稿一覧</h1>
         <table class="memo-table">
                 <thead>
                     <tr class="memo-table-head">

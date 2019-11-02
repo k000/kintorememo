@@ -47,6 +47,7 @@ class MemoController extends Controller
     public function create(MemoValiRequest $request)
     {
         $this->memoRepo->createMemo($request);
+        return redirect('/memo');
     }
 
 
