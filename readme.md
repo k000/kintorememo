@@ -1,15 +1,16 @@
 # 画面
 
 ## 投稿一覧画面
+
 ![index](https://user-images.githubusercontent.com/39722427/68069973-23996080-fdab-11e9-8ef6-29fa980314fe.png)
 
 ## 投稿画面
-![create]
-(https://user-images.githubusercontent.com/39722427/68070017-94407d00-fdab-11e9-9e2c-a298b2edee68.png)
+
+![create](https://user-images.githubusercontent.com/39722427/68070017-94407d00-fdab-11e9-9e2c-a298b2edee68.png)
 
 ## 投稿詳細画面
-![memo]
-(https://user-images.githubusercontent.com/39722427/68070036-c5b94880-fdab-11e9-830d-60d048354128.png)
+
+![memo](https://user-images.githubusercontent.com/39722427/68070036-c5b94880-fdab-11e9-830d-60d048354128.png)
 
 
 
