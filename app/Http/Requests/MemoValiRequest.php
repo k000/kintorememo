@@ -16,6 +16,16 @@ class MemoValiRequest extends FormRequest
         return true;
     }
 
+
+    public function messages()
+    {
+        return [
+            'event.max' => '部位は25文字まで入力可能です',
+            'place.max' => '場所は25文字まで入力可能です',
+            'memo.max' => 'メモは1000文字まで入力可能です。'
+        ];
+    }
+
     /**
      * Get the validation rules that apply to the request.
      *
@@ -24,7 +34,9 @@ class MemoValiRequest extends FormRequest
     public function rules()
     {
         return [
-            'event' => 'max:25' //わかりやすくするため3です。
+            'event' => 'max:25',
+            'place' => 'max:25',
+            'memo' => 'max:1000',
         ];
     }
 }
