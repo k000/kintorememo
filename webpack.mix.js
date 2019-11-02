@@ -12,6 +12,7 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/assets/js/main.js','public/js/main.js')
+    .js('resources/assets/js/delete.js','public/js/delete.js')
     .sass('resources/assets/sass/main.scss', 'public/css/main.css')
     .options({
         processCssUrls: false

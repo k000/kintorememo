@@ -1,32 +1,16 @@
 @extends('Layouts.base')
 
+
+@section('title')
+ホーム | {{ config('app.name', '筋トレメモ') }}
+@endsection
+
 @section('content')
 
 
-
-
-
 <div id="home-content">
-    <div>
-
-        <div>
-            <a href="{{ route('logout') }}"
-                onclick="event.preventDefault();
-                                document.getElementById('logout-form').submit();">
-                {{ __('Logout') }}
-            </a>
-
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                @csrf
-            </form>
-        </div>
-
-
-
     <div id="memo-content-outer">
-
         <h1>Index</h1>
-
         <table class="memo-table">
                 <thead>
                     <tr class="memo-table-head">
@@ -56,29 +40,13 @@
                         </tr>
                     @endforeach
                 </tbody>
-            </table>
-
-        </div>
+        </table>
     </div>
-
 </div>
-
-<script>
-        const dels = document.getElementsByClassName('gomi')
-        let i;
-
-        for(i=0;i<dels.length;i++){
-            dels[i].addEventListener('click', function(e) {
-                e.preventDefault();
-                if(confirm('投稿を削除をします')){
-                    document.getElementById('form_' + this.dataset.id).submit();
-                }
-            })
-        }
-</script>
-
 
 @endsection
 
-
+@section('customjs')
+<script src="{{ asset('/js/delete.js') }}"></script>
+@endsection
 

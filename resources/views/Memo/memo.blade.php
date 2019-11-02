@@ -1,5 +1,12 @@
 @extends('Layouts.base')
 
+
+@section('title')
+{{$datas->event}}/{{$datas->day}} | {{ config('app.name', '筋トレメモ') }}
+@endsection
+
+
+
 @section('content')
 
 

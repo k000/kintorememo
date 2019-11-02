@@ -1,9 +1,13 @@
 @extends('Layouts.base')
 
+@section('title')
+新規投稿 | {{ config('app.name', '筋トレメモ') }}
+@endsection
+
 @section('content')
 <div id="content">
 <div id="form-outer">
-    <h1>create new Meeeeemo!</h1>
+    <h1>新規投稿</h1>
     <p>you input this area also ths freature nasu choizes is shun.</p>
     <form method ="post" action="/memo/create">
         {{ csrf_field() }}
@@ -66,8 +70,12 @@
 </div>
 </div>
 
-<script src="{{ asset('/js/main.js') }}"></script>
-
 @endsection
+
+
+@section('customjs')
+<script src="{{ asset('/js/main.js') }}"></script>
+@endsection
+
 
 
