@@ -11,6 +11,7 @@
                 筋トレの記録をいつでもどこもでメモできる。最強のWEBアプリケーションです。<br />
                 Twitterアカウントさえあれば、誰でも無料で開始することができます。
             </p>
+            <br />
             <span class="login-btn">
                 <a href="{{ route("twitter.login") }}">Twitterアカウントでログインして利用開始する</a>
             </span>
